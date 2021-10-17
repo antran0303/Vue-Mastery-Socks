@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asstes/style.css">
+
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="nav-bar"></div>
+
+        <div class="cart">Cart({{ cart.length }})</div>
+
+        <product-display :premium="premium" @add-to-cart="updateCart" @remove-to-cart="removeCart"></product-display>
+
+    </div>
+    <!-- import App -->
+    <script src="./main.js"></script>
+
+    <!-- import componet -->
+    <script src="./Componets/productDisplay.js"></script>
+    <script src="./Componets/reviewForm.js"></script>
+    <script src="./Componets/reviewList.js"></script>
+
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+
+</html>
